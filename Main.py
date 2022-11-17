@@ -1,3 +1,7 @@
-import string
+import PySimpleGUI as win
 
-print(string.printable)
+win.theme('DarkAmber')
+
+layout = [[win.Text("Hello Mom!")]]
+
+window = win.Window('HI MOM', layout)
