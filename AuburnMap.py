@@ -15,12 +15,6 @@ auburnMap.add_node("StudentCenter")
 auburnMap.add_node("MellAtQuad")
 auburnMap.add_node("Parker")
 
-
-
-
-"""Grouping all Nodes into a list."""
-allNodes = ["haleyAtThatch","haleyAtMell","GinnConcourse","StudentCenter"]
-
 """Connecting the Nodes with data from google maps. The weight is the distance between the nodes in meters."""
 nx.add_path(auburnMap,["GinnConcourse","EngDr"],weight=230)
 auburnMap.add_edge("GinnConcourse", "haleyAtThatch", weight = 250)
@@ -38,8 +32,8 @@ auburnMap.add_edge("Mell", "Quad", weight = 105)
 auburnMap.add_edge("MellAtQuad", "Quad", weight = 163)
 auburnMap.add_edge("StudentCenter", "Quad", weight = 200)
 
-
-"""Methods"""
+global nodeList 
+nodeList = ["GinnConcourse", "EngDr", "Ross", "haleyAtThatch", "haleyAtMell", "Mell", "Quad", "StudentCenter", "MellAtQuad", "Parker"]
 
 
 
