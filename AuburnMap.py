@@ -57,8 +57,21 @@ def calcPathLength(shortestPath):
         length += nx.path_weight(auburnMap,[shortestPath[i], shortestPath[i+1]], "weight")
         i += 1
     return length
-
-#quadToParker = shortestPath("Quad", "Parker")
+"""
+Result:
+Parameters: Source Node Destination Node
+Returns: Information of the shortest trip between two Nodes
+"""
+def result(source, destination):
+    path = shortestPath(source, destination)
+    pathString = ''.join(path)
+    pathLength = calcPathLength(path)
+    #1.2 m/s is average walking speed
+    estTime = pathLength / 1.2 / 60
+    print("The shortest distance between " + source + " and " + destination + " is " + pathString + ".")
+    print("The current length between the two locations is " + str(pathLength) + "m.")
+    print("Your estimated travel time is " + str(estTime) + " Minutes.")
+result("Quad", "Parker")
 #print(calcPathLength(quadToParker))
 #nx.draw(auburnMap, with_labels = True)
 #plt.show()
