@@ -67,13 +67,14 @@ def result(source, destination):
     pathString = ""
     for n in range(len(path)):
         pathString += path[n]
-        pathString += " -> "
+        if n < len(path) - 1:
+            pathString += " -> "
     pathLength = calcPathLength(path)
     #1.2 m/s is average walking speed
     estTime = pathLength / 1.2 / 60
     estTime = round(estTime, 2)
-    pathStr = "The shortest distance between " + source + " and " + destination + " is " + pathString + "."
-    lengthstr = "The current length between the two locations is " + str(pathLength) + "m."
+    pathStr = "The shortest distance between " + source + " and " + destination + " is: " + pathString + "."
+    lengthstr = "The current length between the two locations is " + str(pathLength) + " meters."
     timestr = "Your estimated travel time is " + str(estTime) + " Minutes."
     strList = [pathStr, lengthstr, timestr]
     return strList
