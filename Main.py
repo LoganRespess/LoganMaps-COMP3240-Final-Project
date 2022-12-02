@@ -4,9 +4,6 @@ import AuburnMap
 sg.theme('Dark')
 
 
-pathResult = "Cuck"
-lengthResult = ""
-timeResult = ""
 
 #Layout of left side of Screen. Will have the map.
 layoutLeft = [
